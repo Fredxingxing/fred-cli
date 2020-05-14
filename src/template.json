@@ -1,0 +1,20 @@
+[
+  {
+    "label": "vue-pro 前台",
+    "key": "backend",
+    "repository": "https://github.com/Fredxingxing/vue-pro.git",
+    "afterTip": "运行 npm install && npm start"
+  },
+//  {
+//    "label": "antd-pro 前台",
+//    "key": "frontend",
+//    "repository": "https://p2.hbtv.com.cn/src/scm/lab/nebula-umi-app.git",
+//    "afterTip": "运行 npm install && npm start"
+//  },
+//  {
+//    "label": "antd-pro 后台+前台",
+//    "key": "backendAndFront",
+//    "repository": "https://p2.hbtv.com.cn/src/scm/lab/nebula-front-template.git",
+//    "afterTip": "运行 npm install && npm start"
+//  }
+]
