@@ -35,15 +35,8 @@ function download(url, Path, callback) {
 
     // remove .git directory
     function removeDotGit() {
-        const args = ['-rf', '.git'];
-        const process = spawn('rm', args, {cwd: targetPath});
-        process.on('close', function (status) {
-            if (status === 0) {
-                callback && callback();
-            } else {
-                callback && callback(new Error(`'clear git' failed with status ${status}`));
-            }
-        });
+        fs.removeSync(`${targetPath}/.git`)
+        callback && callback()
     }
 }
 
