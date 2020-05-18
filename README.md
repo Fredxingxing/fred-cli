@@ -12,7 +12,14 @@ $ fred
 If you,
 
 Require a browser that supports IE 8 or lower
+
 Need to run Node < 10
+
 Require a lot of webpack customization
+
 Need to use a different routing scheme
+
 Then fred may not be right for you.
+
+
+️ ️ ️ 
