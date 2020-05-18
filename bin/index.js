@@ -8,8 +8,10 @@ const {fetch} = require('fetch');
 const program = require('commander');
 const projects = require('../src/template')
 const fs = require('fs-extra')
+const fs_orgin = require('fs')
 const warning = chalk.keyword('orange');
 
+//
 //
 function start() {
     (() => {
@@ -39,7 +41,7 @@ function start() {
             }
         ];
 
-        inquirer.prompt(options).then(({project,name}) => {
+        inquirer.prompt(options).then(({project, name}) => {
             // const { project } = chooseProject;
             const {repository = '', afterTip = null} = project;
             // 创建文件夹
@@ -49,18 +51,38 @@ function start() {
                 text: `正在下载 `,
             });
             spinnerDownload.start();
-            download(repository, name,function (err) {
+            download(repository, name, function (err) {
                 if (err) {
                     spinnerDownload.fail('用户名或密码错了, 或目录不空');
                     return;
                 }
                 spinnerDownload.succeed('下载完成.');
+                changeFile(name)
                 if (afterTip) {
                     console.log(warning(afterTip));
                 }
             });
         });
     })()
+}
+
+function changeFile(name) {
+    fs_orgin.readFile(`./${name}/package.json`, {flag: 'r+', encoding: 'utf8'}, (err, data) => {
+        if (err) {
+            console.log(err)
+            return
+        }
+        let newFile = JSON.parse(data)
+        newFile.name = name
+        newFile = Buffer.from(JSON.stringify(newFile))
+        fs.removeSync(`./${name}/package.json`)
+        fs_orgin.writeFile(`./${name}/package.json`, newFile, {flag: 'a'}, (err) => {
+            if (err) {
+                console.error(err);
+            }
+        })
+    });
+
 }
 
 program.version('1.1.0', '-v, --version').action(() => {
