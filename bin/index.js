@@ -12,7 +12,7 @@ const fs_orgin = require('fs')
 const warning = chalk.keyword('orange');
 
 //
-//
+//开始
 function start() {
     (() => {
         const options = [
@@ -66,6 +66,7 @@ function start() {
     })()
 }
 
+// 修改文件 保存
 function changeFile(name) {
     fs_orgin.readFile(`./${name}/package.json`, {flag: 'r+', encoding: 'utf8'}, (err, data) => {
         if (err) {
@@ -76,7 +77,7 @@ function changeFile(name) {
         newFile.name = name
         newFile = Buffer.from(JSON.stringify(newFile))
         fs.removeSync(`./${name}/package.json`)
-        fs_orgin.writeFile(`./${name}/package.json`, newFile, {flag: 'a'}, (err) => {
+            fs_orgin.writeFile(`./${name}/package.json`, newFile, {flag: 'a'}, (err) => {
             if (err) {
                 console.error(err);
             }
