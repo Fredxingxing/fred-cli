@@ -1,4 +1,4 @@
-# fred-cli
+# fred-cli DEV
 a cli tool to copy template , suppling out of the Box project
 
 # How to Use
@@ -22,4 +22,4 @@ Need to use a different routing scheme
 Then fred may not be right for you.
 
 
-️ ️ ️ 
+
