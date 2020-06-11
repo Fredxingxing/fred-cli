@@ -22,6 +22,6 @@ Need to use a different routing scheme
 Then fred may not be right for you.
 
 ### ToDo
-add project to NPM
-make npm install to auto
+1.add project to NPM
+2.make npm install to auto
 add template.js
