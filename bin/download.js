@@ -1,5 +1,5 @@
 /**
- * git clone, checkout and clear
+ * git clone, checkout and clear etc.
  */
 
 const spawn = require('child_process').spawn;
