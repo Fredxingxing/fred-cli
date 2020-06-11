@@ -1,5 +1,5 @@
 // add your projectUrl
-
+// add label\key
 module.exports = [
     {
         "label": "vue-pro 前台",
