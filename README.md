@@ -23,4 +23,5 @@ Then fred may not be right for you.
 
 ### ToDo
 add project to NPM
+make npm install to auto
 
