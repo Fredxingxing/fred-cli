@@ -1,4 +1,6 @@
-module.exports =  [
+// add your projectUrl
+
+module.exports = [
     {
         "label": "vue-pro 前台",
         "key": "backend",
