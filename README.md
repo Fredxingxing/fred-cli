@@ -24,4 +24,4 @@ Then fred may not be right for you.
 ### ToDo
 1.add project to NPM
 2.make npm install to auto
-add template.js
+3.add template.js
