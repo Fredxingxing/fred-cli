@@ -1,4 +1,4 @@
-# fred-cli DEV
+# fred-cli
 a cli tool to copy template , suppling out of the Box project
 
 # How to Use
