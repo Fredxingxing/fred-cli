@@ -22,6 +22,5 @@ Need to use a different routing scheme
 Then fred may not be right for you.
 
 ### ToDo
-1.add project to NPM
-2.make npm install to auto
-3.add template.js
+1.use [ink](https://github.com/vadimdemedes/ink) rewrite 
+2.update template.js
